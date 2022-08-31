@@ -68,29 +68,38 @@ Run Time
 
   <tr>
     <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap; text-align: right">3.59 K</td>
-    <td style="white-space: nowrap; text-align: right">278.19 &micro;s</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;79.83%</td>
-    <td style="white-space: nowrap; text-align: right">199.79 &micro;s</td>
-    <td style="white-space: nowrap; text-align: right">1317.47 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">3.41 K</td>
+    <td style="white-space: nowrap; text-align: right">293.45 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;70.76%</td>
+    <td style="white-space: nowrap; text-align: right">224.53 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">1356.08 &micro;s</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap; text-align: right">3.36 K</td>
-    <td style="white-space: nowrap; text-align: right">297.38 &micro;s</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;84.62%</td>
-    <td style="white-space: nowrap; text-align: right">213.32 &micro;s</td>
-    <td style="white-space: nowrap; text-align: right">1276.34 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">2.92 K</td>
+    <td style="white-space: nowrap; text-align: right">342.49 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;69.02%</td>
+    <td style="white-space: nowrap; text-align: right">252.57 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">1743.08 &micro;s</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap; text-align: right">2.94 K</td>
-    <td style="white-space: nowrap; text-align: right">340.69 &micro;s</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;62.15%</td>
-    <td style="white-space: nowrap; text-align: right">258.02 &micro;s</td>
-    <td style="white-space: nowrap; text-align: right">1373.17 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">2.83 K</td>
+    <td style="white-space: nowrap; text-align: right">353.87 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;72.12%</td>
+    <td style="white-space: nowrap; text-align: right">262.22 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">1728.70 &micro;s</td>
+  </tr>
+
+  <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap; text-align: right">1.07 K</td>
+    <td style="white-space: nowrap; text-align: right">931.22 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;46.50%</td>
+    <td style="white-space: nowrap; text-align: right">867.69 &micro;s</td>
+    <td style="white-space: nowrap; text-align: right">2427.14 &micro;s</td>
   </tr>
 
 </table>
@@ -105,20 +114,26 @@ Comparison
     <th style="text-align: right">Slower</th>
   <tr>
     <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap;text-align: right">3.59 K</td>
+    <td style="white-space: nowrap;text-align: right">3.41 K</td>
     <td>&nbsp;</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap; text-align: right">3.36 K</td>
-    <td style="white-space: nowrap; text-align: right">1.07x</td>
+    <td style="white-space: nowrap; text-align: right">2.92 K</td>
+    <td style="white-space: nowrap; text-align: right">1.17x</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap; text-align: right">2.94 K</td>
-    <td style="white-space: nowrap; text-align: right">1.22x</td>
+    <td style="white-space: nowrap; text-align: right">2.83 K</td>
+    <td style="white-space: nowrap; text-align: right">1.21x</td>
+  </tr>
+
+  <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap; text-align: right">1.07 K</td>
+    <td style="white-space: nowrap; text-align: right">3.17x</td>
   </tr>
 
 </table>
@@ -135,18 +150,23 @@ Memory Usage
   </tr>
   <tr>
     <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap">28.63 KB</td>
+    <td style="white-space: nowrap">66.28 KB</td>
     <td>&nbsp;</td>
   </tr>
     <tr>
     <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap">31.49 KB</td>
-    <td>1.1x</td>
+    <td style="white-space: nowrap">69.15 KB</td>
+    <td>1.04x</td>
   </tr>
     <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap">50.44 KB</td>
-    <td>1.76x</td>
+    <td style="white-space: nowrap">88.09 KB</td>
+    <td>1.33x</td>
+  </tr>
+    <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap">27.16 KB</td>
+    <td>0.41x</td>
   </tr>
 </table>
 
@@ -168,29 +188,38 @@ Run Time
 
   <tr>
     <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap; text-align: right">0.27</td>
-    <td style="white-space: nowrap; text-align: right">3.66 s</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;10.76%</td>
-    <td style="white-space: nowrap; text-align: right">3.69 s</td>
-    <td style="white-space: nowrap; text-align: right">4.35 s</td>
+    <td style="white-space: nowrap; text-align: right">0.25</td>
+    <td style="white-space: nowrap; text-align: right">3.99 s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;13.62%</td>
+    <td style="white-space: nowrap; text-align: right">4.05 s</td>
+    <td style="white-space: nowrap; text-align: right">4.69 s</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap; text-align: right">0.26</td>
-    <td style="white-space: nowrap; text-align: right">3.78 s</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;9.86%</td>
-    <td style="white-space: nowrap; text-align: right">3.92 s</td>
-    <td style="white-space: nowrap; text-align: right">4.25 s</td>
+    <td style="white-space: nowrap; text-align: right">0.25</td>
+    <td style="white-space: nowrap; text-align: right">4.00 s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;8.71%</td>
+    <td style="white-space: nowrap; text-align: right">4.13 s</td>
+    <td style="white-space: nowrap; text-align: right">4.47 s</td>
+  </tr>
+
+  <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap; text-align: right">0.148</td>
+    <td style="white-space: nowrap; text-align: right">6.76 s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;4.12%</td>
+    <td style="white-space: nowrap; text-align: right">6.67 s</td>
+    <td style="white-space: nowrap; text-align: right">7.27 s</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap; text-align: right">0.154</td>
-    <td style="white-space: nowrap; text-align: right">6.48 s</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;20.10%</td>
-    <td style="white-space: nowrap; text-align: right">7.26 s</td>
-    <td style="white-space: nowrap; text-align: right">7.66 s</td>
+    <td style="white-space: nowrap; text-align: right">0.136</td>
+    <td style="white-space: nowrap; text-align: right">7.33 s</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;20.97%</td>
+    <td style="white-space: nowrap; text-align: right">8.35 s</td>
+    <td style="white-space: nowrap; text-align: right">8.59 s</td>
   </tr>
 
 </table>
@@ -205,20 +234,26 @@ Comparison
     <th style="text-align: right">Slower</th>
   <tr>
     <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap;text-align: right">0.27</td>
+    <td style="white-space: nowrap;text-align: right">0.25</td>
     <td>&nbsp;</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap; text-align: right">0.26</td>
-    <td style="white-space: nowrap; text-align: right">1.03x</td>
+    <td style="white-space: nowrap; text-align: right">0.25</td>
+    <td style="white-space: nowrap; text-align: right">1.0x</td>
+  </tr>
+
+  <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap; text-align: right">0.148</td>
+    <td style="white-space: nowrap; text-align: right">1.69x</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap; text-align: right">0.154</td>
-    <td style="white-space: nowrap; text-align: right">1.77x</td>
+    <td style="white-space: nowrap; text-align: right">0.136</td>
+    <td style="white-space: nowrap; text-align: right">1.84x</td>
   </tr>
 
 </table>
@@ -235,18 +270,23 @@ Memory Usage
   </tr>
   <tr>
     <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap">292.53 MB</td>
+    <td style="white-space: nowrap">472.35 MB</td>
     <td>&nbsp;</td>
   </tr>
     <tr>
     <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap">267.03 MB</td>
-    <td>0.91x</td>
+    <td style="white-space: nowrap">446.86 MB</td>
+    <td>0.95x</td>
+  </tr>
+    <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap">14.06 MB</td>
+    <td>0.03x</td>
   </tr>
     <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap">878.36 MB</td>
-    <td>3.0x</td>
+    <td style="white-space: nowrap">1058.18 MB</td>
+    <td>2.24x</td>
   </tr>
 </table>
 
@@ -267,30 +307,39 @@ Run Time
   </tr>
 
   <tr>
-    <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap; text-align: right">6.92</td>
-    <td style="white-space: nowrap; text-align: right">144.59 ms</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;18.54%</td>
-    <td style="white-space: nowrap; text-align: right">134.99 ms</td>
-    <td style="white-space: nowrap; text-align: right">225.15 ms</td>
+    <td style="white-space: nowrap">recursion</td>
+    <td style="white-space: nowrap; text-align: right">7.05</td>
+    <td style="white-space: nowrap; text-align: right">141.79 ms</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;16.22%</td>
+    <td style="white-space: nowrap; text-align: right">132.93 ms</td>
+    <td style="white-space: nowrap; text-align: right">219.86 ms</td>
   </tr>
 
   <tr>
-    <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap; text-align: right">6.81</td>
-    <td style="white-space: nowrap; text-align: right">146.83 ms</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;16.92%</td>
-    <td style="white-space: nowrap; text-align: right">139.41 ms</td>
-    <td style="white-space: nowrap; text-align: right">214.93 ms</td>
+    <td style="white-space: nowrap">lenses</td>
+    <td style="white-space: nowrap; text-align: right">5.90</td>
+    <td style="white-space: nowrap; text-align: right">169.62 ms</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;20.83%</td>
+    <td style="white-space: nowrap; text-align: right">157.35 ms</td>
+    <td style="white-space: nowrap; text-align: right">270.39 ms</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap; text-align: right">5.36</td>
-    <td style="white-space: nowrap; text-align: right">186.61 ms</td>
-    <td style="white-space: nowrap; text-align: right">&plusmn;15.17%</td>
-    <td style="white-space: nowrap; text-align: right">180.54 ms</td>
-    <td style="white-space: nowrap; text-align: right">264.18 ms</td>
+    <td style="white-space: nowrap; text-align: right">4.86</td>
+    <td style="white-space: nowrap; text-align: right">205.97 ms</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;14.49%</td>
+    <td style="white-space: nowrap; text-align: right">199.06 ms</td>
+    <td style="white-space: nowrap; text-align: right">298.95 ms</td>
+  </tr>
+
+  <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap; text-align: right">3.00</td>
+    <td style="white-space: nowrap; text-align: right">333.08 ms</td>
+    <td style="white-space: nowrap; text-align: right">&plusmn;9.43%</td>
+    <td style="white-space: nowrap; text-align: right">332.60 ms</td>
+    <td style="white-space: nowrap; text-align: right">408.06 ms</td>
   </tr>
 
 </table>
@@ -304,21 +353,27 @@ Comparison
     <th style="text-align: right">IPS</th>
     <th style="text-align: right">Slower</th>
   <tr>
-    <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap;text-align: right">6.92</td>
+    <td style="white-space: nowrap">recursion</td>
+    <td style="white-space: nowrap;text-align: right">7.05</td>
     <td>&nbsp;</td>
   </tr>
 
   <tr>
-    <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap; text-align: right">6.81</td>
-    <td style="white-space: nowrap; text-align: right">1.02x</td>
+    <td style="white-space: nowrap">lenses</td>
+    <td style="white-space: nowrap; text-align: right">5.90</td>
+    <td style="white-space: nowrap; text-align: right">1.2x</td>
   </tr>
 
   <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap; text-align: right">5.36</td>
-    <td style="white-space: nowrap; text-align: right">1.29x</td>
+    <td style="white-space: nowrap; text-align: right">4.86</td>
+    <td style="white-space: nowrap; text-align: right">1.45x</td>
+  </tr>
+
+  <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap; text-align: right">3.00</td>
+    <td style="white-space: nowrap; text-align: right">2.35x</td>
   </tr>
 
 </table>
@@ -334,19 +389,24 @@ Memory Usage
     <th style="text-align: right">Factor</th>
   </tr>
   <tr>
-    <td style="white-space: nowrap">lenses</td>
-    <td style="white-space: nowrap">13.93 MB</td>
+    <td style="white-space: nowrap">recursion</td>
+    <td style="white-space: nowrap">28.93 MB</td>
     <td>&nbsp;</td>
   </tr>
     <tr>
-    <td style="white-space: nowrap">recursion</td>
-    <td style="white-space: nowrap">12.72 MB</td>
-    <td>0.91x</td>
+    <td style="white-space: nowrap">lenses</td>
+    <td style="white-space: nowrap">30.15 MB</td>
+    <td>1.04x</td>
   </tr>
     <tr>
     <td style="white-space: nowrap">iteraptor</td>
-    <td style="white-space: nowrap">35.26 MB</td>
-    <td>2.53x</td>
+    <td style="white-space: nowrap">51.47 MB</td>
+    <td>1.78x</td>
+  </tr>
+    <tr>
+    <td style="white-space: nowrap">async_task</td>
+    <td style="white-space: nowrap">0.80 MB</td>
+    <td>0.03x</td>
   </tr>
 </table>
 

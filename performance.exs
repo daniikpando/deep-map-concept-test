@@ -15,7 +15,8 @@ Benchee.run(
   %{
     "lenses" => fn test_data -> DeepMap.lens_transform(test_data) end,
     "recursion" => fn test_data -> DeepMap.recursive_transform(test_data) end,
-    "iteraptor" => fn test_data -> DeepMap.iteraptor_transform(test_data) end
+    "iteraptor" => fn test_data -> DeepMap.iteraptor_transform(test_data) end,
+    "async_task" => fn test_data -> DeepMap.async_transform(test_data) end
   },
   warmup: 0.1,
   time: 30,

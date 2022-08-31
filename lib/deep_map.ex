@@ -60,9 +60,46 @@ defmodule DeepMap do
 
         {_path, _value} = self ->
           self
-      end,
-      yield: :all
+      end
     )
+  end
+
+  def async_transform(data) do
+    type =
+      cond do
+        is_map(data) ->
+          %{}
+
+        is_list(data) ->
+          []
+      end
+
+    data
+    |> Enum.to_list()
+    |> Task.async_stream(
+      fn
+        {k, v} when is_binary(v) ->
+          new_value = convert_uuids_to_base62(k, v)
+
+          {k, new_value}
+
+        {k, [_ | _] = v} ->
+          {k, Enum.map(v, fn x -> async_transform(x) end)}
+
+        {k, %{} = v} ->
+          {k, async_transform(v)}
+
+        {k, v} ->
+          {k, v}
+
+        %{} = v ->
+          async_transform(v)
+      end,
+      max_concurrency: 3
+    )
+    |> Stream.filter(&match?({:ok, _}, &1))
+    |> Stream.map(fn {_, v} -> v end)
+    |> Enum.into(type)
   end
 
   def convert_uuids_to_base62(key, value) when is_binary(value) do
